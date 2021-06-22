@@ -10,8 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Broadcast1">
 
-        <receiver android:name=".MyBroadcastReceiver">
+        <receiver android:name=".MyBroadcastReceiver" android:exported="true">
             <intent-filter android:priority="1000">
+                <action android:name="in.bitcode.media.DOWNLOAD_COMPLETE"/>
                 <action android:name="android.intent.action.BATTERY_LOW"/>
                 <action android:name="android.intent.action.WALLPAPER_CHANGED"/>
                 <action android:name="android.intent.action.AIRPLANE_MODE"/>

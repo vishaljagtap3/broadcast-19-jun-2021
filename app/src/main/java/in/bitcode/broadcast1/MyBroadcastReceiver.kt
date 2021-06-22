@@ -19,5 +19,10 @@ class MyBroadcastReceiver : BroadcastReceiver() {
                 Log.e("tag", "Airlplane mode - FF")
             }
         }
+        if(intent?.action.equals("in.bitcode.media.DOWNLOAD_COMPLETE")) {
+            var path = intent?.getStringExtra("path")
+            Log.e("tag", path.toString())
+            Toast.makeText(context, path, Toast.LENGTH_LONG).show()
+        }
     }
 }

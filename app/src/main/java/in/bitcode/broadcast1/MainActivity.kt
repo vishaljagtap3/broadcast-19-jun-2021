@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
             br = MyBroadcastReceiver()
 
             var intentFilter = IntentFilter(Intent.ACTION_WALLPAPER_CHANGED)
+            intentFilter.addAction("in.bitcode.event.COMPLETE")
+            intentFilter.addAction("in.bitcode.media.DOWNLOAD_COMPLETE")
             intentFilter.addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED)
             intentFilter.addAction(Intent.ACTION_BATTERY_LOW)
             intentFilter.addAction(Intent.ACTION_POWER_CONNECTED)
